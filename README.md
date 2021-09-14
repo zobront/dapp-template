@@ -8,5 +8,5 @@ This is a simple template for DApp projects built with Hardhat, Ethers.js, Mocha
 - Run your tests using `npx hardhat test`
 - Get deployment information from Infura and add it to `hardhat.config.js`
 - Update details of your deployment script in the `/scripts` folder
-- Deploy with `npx run scripts/deploy.js --network <insert network name from config>`
+- Deploy with `npx hardhat run scripts/deploy.js --network <insert network name from config>`
 - Create your Next.JS app by adding pages, components, and styles
