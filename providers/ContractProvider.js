@@ -1,7 +1,7 @@
 import { ethers } from "ethers"
 import { createContext, useContext, useEffect, useState } from "react"
 
-// import artifacts of compiled contracts
+// import ContractArtifact from '../artifacts/contracts/Contract.sol/Contract.json';
 import { useEthereum } from "./EthereumProvider"
 
 const ContractContext = createContext()
@@ -11,16 +11,18 @@ const ContractProvider = (props) => {
   const [contracts, setContracts] = useState([])
 
   function addContract(name, contract) {
-    setContracts({...contracts, name: contract }) // MAKE SURE THIS WORKS RIGHT
+    let newContracts = [...contracts]
+    newContracts[name] = contract
+    setContracts(newContracts)
   }
 
   useEffect(() => {
-    // const SimpleMessageContract = new ethers.Contract(
-    //   SimpleMessageArtifact.networks["1337"].address,
-    //   SimpleMessageArtifact.abi,
+    // const Contract = new ethers.Contract(
+    //   '0xC36c784B5b787878841508830AdBa84C9DD817A9',
+    //   ContractArtifact.abi,
     //   provider
     // )
-    // addContract("SimpleMessage", SimpleMessageContract)
+    // addContract("Contract", Contract)
   }, [])
 
   const variables = { contracts }

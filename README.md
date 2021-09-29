@@ -7,6 +7,6 @@ This is a simple template for DApp projects built with Hardhat, Ethers.js, Mocha
 - Repeat: Compile using `npx hardhat compile` & run your tests using `npx hardhat test`
 - If needed, deploy locally with `npx hardhat node`
 - Update details of your deployment script in the `/scripts` folder
-- Deploy with `npm run deploy` (I have script set to default to Rinkeby)
+- Deploy with `npm run deploy:rinkeby` 
 - Add all relevant contract information to the ContractProvider
 - Create your Next.JS app by adding pages, components, and style

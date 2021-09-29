@@ -1,10 +1,15 @@
 const assert = require('assert')
 const { ethers } = require("hardhat");
+// const ContractArtifact = require('../artifacts/contracts/Contract.sol/Contract.json')
 
-let contractName;
+let signer, contract;
 
 beforeEach(async () => {
-  // do any setup needed, like creating a new contract instance
+  [signer] = await ethers.getSigners();
+
+  // const Contract = await new ethers.ContractFactory(ContractArtifact.abi, ContractArtifact.bytecode, signer);
+  // contract = await Contract.deploy();
+  // await contract.deployed()
 });
 
 describe("Contract Name", () => {
