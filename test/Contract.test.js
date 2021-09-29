@@ -1,19 +1,21 @@
 const assert = require('assert')
 const { ethers } = require("hardhat");
-// const ContractArtifact = require('../artifacts/contracts/Contract.sol/Contract.json')
+const ReplaceThisArtifact = require('../artifacts/contracts/ReplaceThis.sol/ReplaceThis.json')
 
-let signer, contract;
+// NOTE: Replace all instances of "ReplaceThis" with uppercase, and "replacethat" with lowercase
+
+let signer, replacethat;
 
 beforeEach(async () => {
   [signer] = await ethers.getSigners();
 
-  // const Contract = await new ethers.ContractFactory(ContractArtifact.abi, ContractArtifact.bytecode, signer);
-  // contract = await Contract.deploy();
-  // await contract.deployed()
+  const ReplaceThis = await new ethers.ContractFactory(ReplaceThisArtifact.abi, ReplaceThisArtifact.bytecode, signer);
+  replacethat = await ReplaceThis.deploy();
+  await replacethat.deployed()
 });
 
-describe("Contract Name", () => {
-  it("should do xyz", async () => {
-    assert(1 == 1);
+describe("ReplaceThis", () => {
+  it("should deploy", async () => {
+    assert.ok(replacethat.address);
   });
 });
