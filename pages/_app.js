@@ -1,7 +1,15 @@
 import '../styles/globals.css'
+import EthereumProvider from "../providers/EthereumProvider"
+import ContractProvider from "../providers/ContractProvider"
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }) => {
+  return (
+    <EthereumProvider>
+      <ContractProvider>
+        <Component {...pageProps} />
+      </ContractProvider>
+    </EthereumProvider>
+  )
 }
 
-export default MyApp
+export default App
