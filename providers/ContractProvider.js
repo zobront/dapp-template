@@ -1,10 +1,12 @@
 import { ethers } from "ethers"
 import { createContext, useContext, useEffect, useState } from "react"
 
-// import ContractArtifact from '../artifacts/contracts/Contract.sol/Contract.json';
+import ReplaceThisArtifact from '../artifacts/contracts/ReplaceThis.sol/ReplaceThis.json';
 import { useEthereum } from "./EthereumProvider"
 
 const ContractContext = createContext()
+
+// NOTE: Replace instances of "ReplaceThis" with uppercase, and "replacethis" with lowercase instance
 
 const ContractProvider = (props) => {
   const { provider } = useEthereum()
@@ -17,12 +19,12 @@ const ContractProvider = (props) => {
   }
 
   useEffect(() => {
-    // const Contract = new ethers.Contract(
-    //   '0xC36c784B5b787878841508830AdBa84C9DD817A9',
-    //   ContractArtifact.abi,
-    //   provider
-    // )
-    // addContract("Contract", Contract)
+    const ReplaceThis = new ethers.Contract(
+      '0xC36c784B5b787878841508830AdBa84C9DD817A9',
+      ReplaceThisArtifact.abi,
+      provider
+    )
+    addContract("replacethis", ReplaceThis)
   }, [])
 
   const variables = { contracts }
