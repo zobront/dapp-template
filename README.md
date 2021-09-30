@@ -3,6 +3,7 @@
 This is a simple template for DApp projects built with Hardhat, Ethers.js, Mocha and NextJS.
 
 - Run `npm install` to get all dependencies (including Harthat) set up
+- To push to github, use `git remote set-url origin NEWURL` so that it doesn't override the template
 - Write smart contracts and include as *.sol files in `/contracts` folder
 - Write tests in parallel using Mocha and include them in the `/test` folder
 - Repeat: Compile using `npx hardhat compile` & run your tests using `npx hardhat test`
