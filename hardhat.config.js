@@ -7,6 +7,9 @@ const RINKEBY_PRIVATE_KEY = '020441984b59f12de76cde69a73bb1fcbb2a1f8133b3074dbf6
 module.exports = {
   solidity: "0.8.4",
   networks: {
+    hardhat: {
+      chainId: 1337
+    },
     rinkeby: {
       url: INFURA_URL,
       accounts: [`0x${RINKEBY_PRIVATE_KEY}`]
